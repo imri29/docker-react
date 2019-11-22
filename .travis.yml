@@ -2,7 +2,7 @@ language: generic
 
 sudo: required
 services:
-  - docker
+  - dockerasd
 
 before_install:
   - docker build -t imri294/docker-react -f Dockerfile.dev .
