@@ -1,0 +1,13 @@
+version: '3'
+services:
+  client:
+    build:
+      context: . # where we want the files pulled from (pwd).
+                 # this is because we don't have a conventional Dockerfile.
+      dockerfile: Dockerfile.dev
+    ports:
+      - '3000:3000'
+    volumes:
+      - /app/node_modules # leave this directory as it is inside the container
+      - .:/app/ # map current folder outside the container (.) to the
+        # app folder inside the container.
